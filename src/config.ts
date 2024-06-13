@@ -9,6 +9,4 @@ export default registerAs('config', () => ({
         host: process.env.DB_HOST,
     },
     MYSQL_URL: process.env.DB_URL,
-    // jwtSecret: process.env.JWT_KEY,
-    // API_KEY: process.env.API_KEY,
 }));
