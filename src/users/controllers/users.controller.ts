@@ -8,11 +8,13 @@ export class UserController {
   constructor(private readonly userService: UserService) {}
 
   @Post()
-  async create(@Body() createUserDto: CreateUserDto) {
+    async create(@Body() createUserDto: CreateUserDto) {
+    console.log('Datos recibidos:', createUserDto);
     return this.userService.createUser(createUserDto);
-  }
+}
 
-  @UseGuards(JwtAuthGuard)
+
+  @UseGuards()
   @Get()
   async findAll() {
     return this.userService.getAllUsers();
